@@ -6,8 +6,6 @@
 #include<math.h>
 using namespace std;
 
-
-// 
 class window {
 public:
     virtual void render() = 0;
@@ -17,7 +15,6 @@ class scrollbar {
 public:
     virtual void render() = 0;
 };  
-
 
 
 class windows_window : public window {
@@ -32,7 +29,6 @@ public:
     void render() override {
         std::cout << "Drawing Windows scrollbar-" << std::endl;
     }
-
 };  
 
 class linux_window : public window {
@@ -47,5 +43,14 @@ public:
     void render() override {
         std::cout << "Drawing Linux scrollbar" << std::endl;
     }
-
 };
+
+
+// Abstract Factory interface
+class GUIFactory {
+public:
+    virtual window* createWindow() = 0;
+    virtual scrollbar* createScrollbar() = 0;
+};
+
+// Concrete factories
