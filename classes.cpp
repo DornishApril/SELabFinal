@@ -35,10 +35,17 @@ public:
 
 };  
 
-class linux_window{
+class linux_window : public window {
+public:
+    void render() override {
+        std::cout << "Drawing Linux window" << std::endl;
+    }
+};
 
-};  
+class linux_scrollbar : public scrollbar {
+public:
+    void render() override {
+        std::cout << "Drawing Linux scrollbar" << std::endl;
+    }
 
-class linux_scrollbar{
-
-};  
+};
