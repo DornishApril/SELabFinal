@@ -54,3 +54,24 @@ public:
 };
 
 // Concrete factories
+class WindowsFactory : public GUIFactory {
+public:
+    window* createWindow() override {
+        return new windows_window();
+    }
+    
+    scrollbar* createScrollbar() override {
+        return new windows_scrollbar();
+    }
+};
+
+class LinuxFactory : public GUIFactory {
+public:
+    window* createWindow() override {
+        return new linux_window();
+    }
+    
+    scrollbar* createScrollbar() override {
+        return new linux_scrollbar();
+    }
+};
