@@ -75,3 +75,22 @@ public:
         return new linux_scrollbar();
     }
 };
+
+
+int main() {
+
+    printf("Creating GUIFactory. . . \n");
+    
+    GUIFactory* windowsFactory = new WindowsFactory();
+    
+    window* winWindow = windowsFactory->createWindow();
+    scrollbar* winScrollbar = windowsFactory->createScrollbar();
+    
+    cout << "Windows GUI components:" <<endl;
+    winWindow->render();
+    winScrollbar->render();
+
+    
+
+    return 0;
+}
