@@ -20,10 +20,18 @@ public:
 
 
 
-class windows_window{
+class windows_window : public window {
+public:
+    void render() override {
+        std::cout << "Drawing Windows window" << std::endl;
+    }
 };
 
-class windows_scrollbar{
+class windows_scrollbar : public scrollbar {
+public:
+    void render() override {
+        std::cout << "Drawing Windows scrollbar-" << std::endl;
+    }
 
 };  
 
