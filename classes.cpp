@@ -93,14 +93,14 @@ int main() {
 
         
 
-    GUIFactory* linuxFactory = new LinuxFactory()
+    GUIFactory* linuxFactory = new LinuxFactory();
 
     window* linWindow = linuxFactory->createWindow();
     scrollbar* linScrollbar = linuxFactory->createScrollbar();
     
-
+    cout << "\nLinux GUI components:" << endl;
     linWindow->render();
-    linScrollbar->render()
+    linScrollbar->render();
 
     return 0;
 }
