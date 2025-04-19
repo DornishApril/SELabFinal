@@ -90,7 +90,17 @@ int main() {
     winWindow->render();
     winScrollbar->render();
 
+
+        
+
+    GUIFactory* linuxFactory = new LinuxFactory()
+
+    window* linWindow = linuxFactory->createWindow();
+    scrollbar* linScrollbar = linuxFactory->createScrollbar();
     
+
+    linWindow->render();
+    linScrollbar->render()
 
     return 0;
 }
